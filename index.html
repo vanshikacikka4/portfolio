@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROFILE</title>
+    <style>
+        body
+        {
+            /* color: aliceblue; */
+           /* background: linear-gradient( rgba(3, 3, 75, 0.34), rgba(255, 192, 203, 0.765)); */
+            /* background: linear-gradient(#c8e4f9d0, #e1c6ffaf); */
+             /* background-color: rgb(236, 231, 231);  */
+             background-color: rgba(244, 225, 133, 0.694);
+        }
+        *
+        {
+            font-family: sans-serif;
+        }
+        img 
+        {   
+           margin-top: 2em;
+            width: 120px;
+            height: 120px;
+            display: block;
+            border:4px solid ;
+            border-color: aliceblue ;
+            border-radius: 50%;
+            box-shadow: 0px 4px 5px rgba(87, 87, 87, 0.388);
+        }
+        .intro-image
+        {
+            margin-top: 0%;
+            color: rgba(240, 248, 255, 0.893);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.326);
+        }
+        .intro-text h2
+        {
+            font-size: x-large;
+            text-align: center;
+            margin-bottom: 12px;
+             /* margin-top: 10px;  */
+        }
+        .role
+        {
+            margin: 0px 0px;
+            border-bottom:1.5px solid rgba(85, 82, 82, 0.596);
+            padding-bottom: 4px;
+            font-size: 15px;
+            text-align: center;
+            /* justify-content: center; */
+        }
+        .desc
+        {
+            font-size: 14.5px;
+            /* justify-content: center; */
+        }
+        .navbar
+        {
+            margin-top: 20px;
+            /* max-width: 900px; */
+            margin-bottom: 25px;
+            border:1.5px solid white;  
+            border-radius: 6px;   
+            background-color: rgb(6, 93, 164);
+        }
+
+        .navbar ul
+        {
+            color: white;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .navbar a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li:not(:last-child)::after
+        {
+            content: " | ";
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .navbar ul li
+        {
+            display: flex;
+           align-items: center;
+           gap: 25px;
+        }
+        .navbar a:hover{
+            text-decoration: underline ;
+        }
+        footer
+        {
+            text-align: center;
+        }
+        .information
+        {
+             display: flex;
+             flex-direction: column;
+             gap: 30px;
+             /* margin: 40px 170px auto; */
+             margin-left: 170px;
+             margin-right: 170px;
+             margin-top: 40px;
+        }
+        .about-me
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid rgb(227, 36, 36);  
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        .skills
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid orange;
+            border-radius: 10px;
+           box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        .projects
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid yellow;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        .education
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid greenyellow;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        .certifications
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid rgb(97, 196, 228);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        .contact-me
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid rgb(149, 58, 223);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(78, 73, 73, 0.646);
+            background-color: rgba(144, 144, 144, 0.498);
+        }
+        footer{
+            background-color: rgb(6, 93, 164);
+            /* width: 900px; */
+            text-align: center;
+            margin: auto;
+            color: white;
+            height: 30px;
+        }
+        .about-me header
+        {
+            background-color: rgb(168, 23, 23);
+        }
+        .skills header
+        {
+            background-color: rgb(224, 147, 4);
+        }
+        .projects header
+        {
+            background-color: rgb(255, 200, 0);
+        }
+        .education header
+        {
+            background-color: rgb(122, 201, 3);
+        }
+        .certifications header
+        {
+            background-color: rgb(0, 132, 255);
+        }
+        .contact-me header
+        {
+            background-color: purple;
+        }
+        table
+        {
+            border:2px solid black; 
+            /* border:2px solid white; */
+            border-collapse: collapse;
+            width: 80%;
+            margin: 10px;
+        }
+        thead,th
+        {
+             border: 1.5px solid black; 
+             /* border:1.5px solid white; */
+            font-weight: bold;
+        }
+        a
+        {
+            /* color: white; */
+        }
+        tbody,td
+        {
+             border: 1.5px solid black;
+             /* border:1.5px solid white; */
+            padding: 5px; 
+        }
+        header
+        {
+            background-color: rgb(144, 144, 144); 
+            color: white;
+            font-weight: 600;
+            height: 30px;
+            padding-left: 10px;
+            padding-top: 8px;
+            border-radius: 8px 8px 0 0;
+        }
+        @media(max-width: 768px)
+        {
+            .information
+            {
+                margin-left: 40px ;
+                margin-right: 40px ;
+            }
+            .navbar ul 
+            {
+            flex-wrap: wrap;
+            }
+        }
+        @media(max-width: 425px)
+        {
+            .information
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="intro-image">
+    <img src="images/Vanshika-4.jpg" alt="my pic">
+    <div class="intro-text">
+    <h2>Vanshika</h2> 
+    <p class="role"> UG Student | Web Development Learner</p> 
+    <p class="desc"><i>Passionate about electronics, communication systems, and emerging technologies.</i> </p>
+    </div>
+    </section>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+             <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>  
+        </ul>
+    </nav>
+    <section class="information">
+    <div class="about-me" id="about">
+        <header>About Me</header>
+        <p style="padding: 0px 10px;">I am a first-year B.Tech Electronics and Communication Engineering student with a keen interest in electronics and communication systems. Currently learning core concepts and exploring hands-on projects to strengthen my fundamentals.</p>
+    </div>
+    <div class="skills" id="skills">
+    <header>Skills</header>
+        <ul>
+            <li>Basic Electronics</li>
+            <li>Digital Electronics</li>
+            <li>Analog Circuits </li>
+            <li>C Programming</li>
+            <li>MATLAB (Basics)</li>
+            <li>Embedded Systems (Basics)</li>
+        </ul>
+    </div>
+    <div class="projects" id="projects">
+        <header>Projects</header>
+        <ul>
+            <li>Automatic Street Light System: Designed using LDR and microcontroller to reduce power consumption.</li>
+            <li>Line Follower Robot: Built using IR sensors and motor driver for autonomous movement.</li>
+        </ul>
+    </div>
+    <div class="education" id="education">
+        
+        <header>Education</header><!-- 
+ Degree     Institution              Year        Percentage 
+ ---------------------------------------------------------
+ B.TECH     KL University            2012        85%
+ HSC        ABC Higher Sec School    2000        88%
+ SSLC       ABC Higher Sec School    1998        90% -->
+ <table>
+    <thead>
+        <tr>
+        <td>Degree</td>
+        <td>Institution</td>
+        <td>Year</td>
+        <td>Percentage</td> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>B.TECH</td>
+        <td>KL University</td>
+        <td>2029</td>
+        <td>88%</td>
+        </tr>
+        <tr>
+        <td>HSC</td>
+        <td>Narayana junior college</td>
+        <td>2025</td>
+        <td>94%</td>
+        </tr>
+        <tr>
+        <td>SSLC</td>
+        <td>International School</td>
+        <td>2023</td>
+        <td>83.5%</td>
+        </tr>
+    </tbody>
+ </table>
+    </div>
+    <div class="certifications" id="certificates">
+    <header>Certifications</header>
+    <ul>
+        <li>Introduction to Electronics - Coursera</li>
+        <li>Embedded Systems Basics - NPTEL</li>
+        <li>MATLAB for Engineers - MathWorks</li>
+    </ul>
+    </div>
+    <div class="contact-me" id="contact">
+<header>Contact Me</header>
+        <ul>
+            <li>Email:<a href="mailto:vanshikacikka4@email.com">vanshikacikka4@email.com</a></li>
+            <li>LinkedIn: linkedin.com/in/vanshika</li>
+        </ul>
+    </div>
+    </section>
+    <footer>
+        <p style="padding:5px;">@2029 Vanshika | UG Student Portfolio </p>
+    </footer>
+</body>
+</html>
